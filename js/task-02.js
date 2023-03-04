@@ -11,4 +11,4 @@ ingredients.forEach(ingredient => {
 })
 
 list.append(...liArray);
-console.log(liArray);
+

@@ -29,8 +29,4 @@ btnCreate.addEventListener('click', () => {
 	boxes.append(...boxesToAdd)
 })
 
-console.log(inputNum.value)
-
-btnDestroy.addEventListener('click', () => {
-	destroyBoxes.call()
-})
+btnDestroy.addEventListener('click', (destroyBoxes))
