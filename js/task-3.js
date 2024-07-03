@@ -1,28 +1,36 @@
 class StringBuilder {
   #value;
-  constructor(params){
-     this.#value = [...params];
+
+  constructor(initialValue = " ") {
+    this.#value = initialValue;
   }
-  get(){
-    return this.#value.join('');
+
+  get() {
+    return this.#value;
   }
-  set (initialValue){
-    this.#value =[...initialValue] ;
+
+  set(initialValue) {
+    this.#value = initialValue;
   }
-  getValue(){
-    return  this.#value.join('');
+
+  getValue() {
+    return this.#value;
   }
-  padEnd(str){
-    this.#value.push(...str);
+
+  padEnd(str) {
+    this.#value += str;
   }
+
   padStart(str) {
-    this.#value.unshift(...str);
+    this.#value = str + this.#value;
   }
-  padBoth(str){
+
+  padBoth(str) {
     this.padStart(str);
     this.padEnd(str);
   }
 }
+
 const builder = new StringBuilder(".");
 console.log(builder.getValue()); // "."
 builder.padStart("^");
